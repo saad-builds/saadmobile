@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 98%;
+
+    --card: 280 60% 15%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 280 60% 15%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 14 100% 57%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 280 70% 25%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 280 40% 35%;
+    --muted-foreground: 48 100% 90%;
+
+    --accent: 48 100% 50%;
+    --accent-foreground: 280 70% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 280 30% 40%;
+    --input: 280 30% 40%;
+    --ring: 48 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens for store design */
+    --gradient-start: 14 100% 57%;
+    --gradient-mid: 9 100% 64%;
+    --gradient-end: 280 70% 25%;
+    --highlight: 48 100% 50%;
+    --highlight-foreground: 280 70% 15%;
+    
+    --sidebar-background: 280 60% 15%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 48 100% 50%;
+    --sidebar-primary-foreground: 280 70% 15%;
+    --sidebar-accent: 280 50% 25%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 280 30% 40%;
+    --sidebar-ring: 48 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-gradient-to-b from-primary via-[hsl(var(--gradient-mid))] to-secondary text-foreground font-sans;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent via-yellow-300 to-accent bg-clip-text text-transparent;
+  }
+
+  .highlight-strip {
+    @apply bg-accent text-accent-foreground px-4 py-2 font-bold;
+  }
+}
