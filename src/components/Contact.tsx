@@ -93,8 +93,10 @@ const Contact = () => {
                 <h3 className="text-xl font-bold text-accent mb-4">
                   Business Hours
                 </h3>
-                <p className="text-foreground text-lg">Open Daily</p>
-                <p className="text-muted-foreground mt-2">روزانہ کھلا</p>
+
+                <p className="text-muted-foreground mt-4">
+                  روزانہ صبح 6 بجے سے رات 10:30 بجے تک کھلا
+                </p>
               </div>
             </CardContent>
           </Card>
